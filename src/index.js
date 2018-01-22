@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './Root';
 import "babel-polyfill";
+import './app.css';
 
 const rootEl = document.getElementById('root');
 
