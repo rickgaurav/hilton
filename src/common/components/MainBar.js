@@ -22,7 +22,7 @@ export default class MainBar extends Component {
 						<Route path="/all" component={AsyncTrainsApp}/>
 						<Route path="/trains" component={AsyncTrainsApp}/>
 						<Route path="/flights" component={AsyncFlightsApp}/>
-						<Route path="/buses" component={AsyncBusesApp}/>
+						<Route path="/bus" component={AsyncBusesApp}/>
 					</Switch>
 				
 			</div>	
