@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Styled from 'styled-components';
+import {withRouter} from 'react-router-dom';
 
 import NavbarItemContainer from '../containers/NavbarItemContainer';
 
@@ -9,7 +10,12 @@ const NavbarStyled = Styled.div`
 	display: flex;
 `;
 
-export default class NavBar extends Component {
+class Navbar extends Component {
+	componentDidMount() {
+		const route = this.props.location.pathname; // route is '/bus' ot '/trains' or '/flights'
+		this.props.setActiveTab(route.substr(1));
+	}
+
 	render() {
 		return (
 			<NavbarStyled>
@@ -21,3 +27,5 @@ export default class NavBar extends Component {
 		);
 	}
 }
+
+export default withRouter(props => <Navbar {...props}/>)

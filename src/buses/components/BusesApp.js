@@ -4,7 +4,7 @@ export default class BusesApp extends Component {
 	render() {
 		return (
 			<div>
-				This is a buses app. Show this bus.
+				This is a Buses App.
 			</div>
 		);
 	}

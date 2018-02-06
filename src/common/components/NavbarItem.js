@@ -22,6 +22,13 @@ const LogoTextStyled = Styled.div`
 	margin-left: 10px;
 `;
 
+const Logo = Styled.div`
+	height: 18px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+`;
+
 export default class NavbarItem extends Component {
 	render() {
 		const path_map = {
@@ -34,9 +41,9 @@ export default class NavbarItem extends Component {
 		return (
 			<Link to={`/${this.props.text}`} onClick={() => this.props.setActiveTab(this.props.text)}>
 				<NavbarItemStyled is_active={this.props.is_active}> 
-					<div>
+					<Logo>
 						<img src={path_map[this.props.text]} alt={this.props.text}/>
-					</div>
+					</Logo>
 					<LogoTextStyled>
 						{this.props.text}
 					</LogoTextStyled>
